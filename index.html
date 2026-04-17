@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>🌤️ Weather Dashboard</h1>
+            <div class="search-box">
+                <input 
+                    type="text" 
+                    id="cityInput" 
+                    placeholder="Search for a city..."
+                    class="search-input"
+                >
+                <button id="searchBtn" class="search-btn">Search</button>
+            </div>
+        </header>
+
+        <!-- Current Weather Section -->
+        <section class="current-weather">
+            <div class="weather-main">
+                <h2 id="cityName" class="city-name">--</h2>
+                <div class="weather-info">
+                    <div class="temperature">
+                        <span id="temp" class="temp-value">--</span>
+                        <span class="temp-unit">°C</span>
+                    </div>
+                    <div class="weather-description">
+                        <p id="description">Loading...</p>
+                        <img id="weatherIcon" src="" alt="weather" class="weather-icon">
+                    </div>
+                </div>
+            </div>
+
+            <div class="weather-details">
+                <div class="detail-card">
+                    <span class="detail-label">Feels Like</span>
+                    <span id="feelsLike" class="detail-value">--°C</span>
+                </div>
+                <div class="detail-card">
+                    <span class="detail-label">Humidity</span>
+                    <span id="humidity" class="detail-value">--%</span>
+                </div>
+                <div class="detail-card">
+                    <span class="detail-label">Wind Speed</span>
+                    <span id="windSpeed" class="detail-value">-- m/s</span>
+                </div>
+                <div class="detail-card">
+                    <span class="detail-label">Pressure</span>
+                    <span id="pressure" class="detail-value">-- hPa</span>
+                </div>
+                <div class="detail-card">
+                    <span class="detail-label">UV Index</span>
+                    <span id="uvIndex" class="detail-value">--</span>
+                </div>
+                <div class="detail-card">
+                    <span class="detail-label">Visibility</span>
+                    <span id="visibility" class="detail-value">-- km</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5-Day Forecast Section -->
+        <section class="forecast-section">
+            <h3>5-Day Forecast</h3>
+            <div class="forecast-container" id="forecastContainer">
+                <!-- Forecast cards will be generated here -->
+            </div>
+        </section>
+
+        <!-- Error Message -->
+        <div id="errorMessage" class="error-message"></div>
+
+        <!-- Loading Spinner -->
+        <div id="loadingSpinner" class="loading-spinner">
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
